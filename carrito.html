@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .cart {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .cart-item {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        .cart-item h2 {
+            margin-bottom: 20px;
+        }
+        .cart-item p {
+            margin-bottom: 10px;
+        }
+        .cart-item button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .cart-item button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart">
+        <div class="cart-item">
+            <h2>Product 1</h2>
+            <p>Price: $100</p>
+            <p>Quantity: 1</p>
+            <button onclick="addToCart('Product 1', 100, 1)">Add to Cart</button>
+        </div>
+        <div class="cart-item">
+            <h2>Product 2</h2>
+            <p>Price: $150</p>
+            <p>Quantity: 1</p>
+            <button onclick="addToCart('Product 2', 150, 1)">Add to Cart</button>
+        </div>
+        <div class="cart-item">
+            <h2>Product 3</h2>
+            <p>Price: $200</p>
+            <p>Quantity: 1</p>
+            <button onclick="addToCart('Product 3', 200, 1)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+        function addToCart(product, price, quantity) {
+            // Here you can implement your own logic to add the product to the cart
+            // For example, you can store the cart data in the local storage or send it to the server
+            console.log('Added to cart:', product, price, quantity);
+        }
+    </script>
+</body>
+</html>
